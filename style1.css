@@ -1,9 +1,22 @@
 <style>
     /* ઉપરના કાર્ડ માટે અલગ કલર */
     
-     .card-body{
-        color: #00a8d6;
-     }
+     <style>
+    /* ફક્ત ઉપરના કાર્ડ માટેનો ક્લાસ */
+    .header-box {
+        background-color: #ffeb3b !important; /* પીળો બેકગ્રાઉન્ડ */
+        color: black !important;             /* કાળો ટેક્સ્ટ */
+        text-align: center;                  /* સેન્ટર ફોન્ટ */
+        font-size: 32px;                     /* મોટી ફોન્ટ સાઈઝ */
+        font-weight: bold;
+        padding: 30px;                       /* ઉપર-નીચે અને ડાબે-જમણે સ્પેસ */
+        margin-bottom: 25px;                 /* નીચેના કાર્ડ્સથી અંતર */
+        border-radius: 12px;                 /* ખૂણા ગોળ કરવા માટે */
+        border: none;                        /* બોર્ડર કાઢવા માટે */
+    }
+</style>
+
+
  
     .main-header-card {
         background-color: #f1f3f5; /* આછો ગ્રે/સફેદ કલર */
