@@ -1,3 +1,9 @@
-body {
+.body {
     background-color:azure;
+}
+
+.card{
+    padding: 40px;
+    margin:20px;
+
 }
