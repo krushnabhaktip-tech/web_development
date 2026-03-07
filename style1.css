@@ -1,0 +1,34 @@
+<style>
+    /* ઉપરના કાર્ડ માટે અલગ કલર */
+    .main-header-card {
+        background-color: #f1f3f5; /* આછો ગ્રે/સફેદ કલર */
+        color: #333;
+        padding: 20px;
+        font-size: 26px;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+    }
+
+    /* નીચેના 3 કાર્ડ્સ માટે બેકગ્રાઉન્ડ કલર અને સ્પેસિંગ */
+    .stat-box {
+        background-color: #00a8d6; /* બ્લુ કલર */
+        color: white;
+        padding: 30px 15px; /* ઉપર-નીચે 30px અને આજુબાજુ 15px સ્પેસ */
+        border-radius: 15px; /* રાઉન્ડ કોર્નર */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* થોડો પડછાયો */
+    }
+
+    /* લખાણ (Text) ની સાઈઝ અને સ્ટાઇલ */
+    .stat-label {
+        font-size: 18px; /* ઉપરના ટેક્સ્ટની સાઈઝ */
+        margin-bottom: 10px;
+        opacity: 0.9;
+    }
+
+    .stat-value {
+        font-size: 32px; /* આંકડા કે નામની સાઈઝ (મોટી) */
+        font-weight: bold;
+        margin: 0;
+    }
+</style>
