@@ -20,22 +20,28 @@
 .card p{
     font-size: 32px;
     color:black;
-    
+    font-weight: bold;
 }
 
 .summary-cards {
     display: flex;
-    justify-content: space-around
+    justify-content: space-between;
     gap:20px;
-    margin-top: 20px;
+    margin-top: 20px 0;
 }
 
 .card{
     flex:1;
-    background-color: #3498db;
+    background-color:#3498db;
     padding: 30px;
-    border-radius:15px;
+    border-radius:20px;
     text-align:center;
     color: white;
-    border: none;
+    border:#2196f3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,1);
+}
+
+.card h3{
+    font-size: 22px;
+    margin-bottom: 10px;
 }
