@@ -3,7 +3,7 @@
     
       
     /* ફક્ત ઉપરના કાર્ડ માટેનો ક્લાસ */
-    .header-box {
+    /* .header-box {
         background-color:#333; 
         color:beige;             
         text-align: center;                  
@@ -14,7 +14,33 @@
         border-radius: 12px;                 
         border: none;   
 
+    } */
+    
+    .header-box {
+        /* 1. બેકગ્રાઉન્ડ અને લખાણ */
+        background-color: #ffeb3b !important; 
+        color: #000 !important;
+        text-align: center;
+        
+        /* 2. ફોન્ટ સાઈઝ મોટી કરવા માટે */
+        font-size: 32px;
+        font-weight: bold;
+
+        /* 3. કાર્ડની અંદરની જગ્યા (ઉપર-નીચે અને આજુબાજુ) */
+        padding: 40px 20px; 
+
+        /* 4. કાર્ડની બહારની જગ્યા (Left, Right, Top થી સ્પેસ) */
+        /* margin: ઉપર ડાબે નીચે જમણે */
+        margin: 20px 40px; 
+
+        /* 5. ખૂણા રાઉન્ડ કરવા માટે (Round Edges) */
+        border-radius: 30px; 
+
+        /* 6. વધારાનો લુક */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: none;
     }
+
  
 
 
