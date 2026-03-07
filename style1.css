@@ -1,5 +1,10 @@
 <style>
     /* ઉપરના કાર્ડ માટે અલગ કલર */
+    
+     .card{
+        color: #00a8d6;
+     }
+ 
     .main-header-card {
         background-color: #f1f3f5; /* આછો ગ્રે/સફેદ કલર */
         color: #333;
