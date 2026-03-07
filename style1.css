@@ -1,20 +1,21 @@
 <style>
     /* ઉપરના કાર્ડ માટે અલગ કલર */
     
-     <style>
+      
     /* ફક્ત ઉપરના કાર્ડ માટેનો ક્લાસ */
     .header-box {
-        background-color: #ffeb3b !important; /* પીળો બેકગ્રાઉન્ડ */
-        color: black !important;             /* કાળો ટેક્સ્ટ */
-        text-align: center;                  /* સેન્ટર ફોન્ટ */
-        font-size: 32px;                     /* મોટી ફોન્ટ સાઈઝ */
+        background-color:#333; 
+        color:beige;             
+        text-align: center;                  
+        font-size: 32px;                     
         font-weight: bold;
-        padding: 30px;                       /* ઉપર-નીચે અને ડાબે-જમણે સ્પેસ */
-        margin-bottom: 25px;                 /* નીચેના કાર્ડ્સથી અંતર */
-        border-radius: 12px;                 /* ખૂણા ગોળ કરવા માટે */
-        border: none;                        /* બોર્ડર કાઢવા માટે */
+        padding: 30px;                       
+        margin-bottom: 25px;                 
+        border-radius: 12px;                 
+        border: none;   
+
     }
-</style>
+ 
 
 
  
