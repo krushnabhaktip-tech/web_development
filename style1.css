@@ -5,5 +5,20 @@
 .card{
     padding: 40px;
     margin:20px;
+    min-width: 250px;
+    min-height: 150px;
+    background-color:cornflowerblue;
+    border: 2px solid #2196f3;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color:floralwhite;
+    font-size: 28px;
+
+}
+
+.card p{
+    font-size: 28px;
+    color:floralwhite;
 
 }
