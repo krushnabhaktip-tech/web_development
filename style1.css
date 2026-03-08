@@ -9,8 +9,10 @@
 header {
     text-align: center; 
     padding: 30px;
-    background-color: #ed0dc8;/* ડાર્ક બ્લુ/ગ્રે કલર */
+    background-color: #0db5ede6;
     color: white;
+    font-size:20px;
+    font-weight:bold;
     border-radius: 15px;
     margin-bottom: 25px;
 }
@@ -18,18 +20,18 @@ header {
 .summary-cards {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .card {
-    background: ;
+    background:white;
     padding: 20px;
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex: 1;
     text-align: center;
-    border-top: 5px solid #3498db; /* બ્લુ બોર્ડર ઉપરની બાજુ */
+    border-top: 5px solid #db34c5; /* બ્લુ બોર્ડર ઉપરની બાજુ */
 }
 
 .amount {
