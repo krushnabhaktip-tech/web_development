@@ -1,27 +1,19 @@
- 
-body {
+ body {
     background-color: #f0f4f8;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #2d3436;
 }
-
- 
 .header-card {
     background: linear-gradient(135deg, #4834d4, #686de0);
     border: none;
 }
-
- 
 .stat-box {
     transition: transform 0.3s ease;
     cursor: default;
 }
-
 .stat-box:hover {
     transform: translateY(-5px);
 }
-
- 
 .icon-circle {
     width: 45px;
     height: 45px;
@@ -31,40 +23,30 @@ body {
     border-radius: 12px;
     font-size: 1.2rem;
 }
-
- 
 .activity-item {
     transition: 0.2s;
     border: 1px solid transparent;
 }
-
 .activity-item:hover {
     background-color: #fff;
     border-color: #dee2e6;
     transform: scale(1.02);
 }
-
-/* Responsive Tweaks */
 @media (max-width: 768px) {
     .header-card h1 {
         font-size: 1.8rem;
     }
-    
     .stat-box h4 {
         font-size: 1.2rem;
     }
-
     .container {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
-
-/* Smooth Shadows */
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,0.05);
 }
-
 .shadow-lg {
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
 }
