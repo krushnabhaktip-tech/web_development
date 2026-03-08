@@ -1,17 +1,17 @@
- 
+/* Background & Fonts */
 body {
     background-color: #f0f4f8;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #2d3436;
 }
 
- 
+/* Header Gradient */
 .header-card {
     background: linear-gradient(135deg, #4834d4, #686de0);
     border: none;
 }
 
- 
+/* Stat Box Styling */
 .stat-box {
     transition: transform 0.3s ease;
     cursor: default;
@@ -21,7 +21,7 @@ body {
     transform: translateY(-5px);
 }
 
- 
+/* Category Progress Bars */
 .icon-circle {
     width: 45px;
     height: 45px;
@@ -32,14 +32,14 @@ body {
     font-size: 1.2rem;
 }
 
- 
+/* Activity Items */
 .activity-item {
     transition: 0.2s;
     border: 1px solid transparent;
 }
 
 .activity-item:hover {
-    background-color: #fff;
+    background-color: #fff !important;
     border-color: #dee2e6;
     transform: scale(1.02);
 }
@@ -62,9 +62,9 @@ body {
 
 /* Smooth Shadows */
 .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.05);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.05)!important;
 }
 
 .shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1)!important;
 }
