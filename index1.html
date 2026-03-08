@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Expense Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Smart Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
     <header>
-        <h1>My Expense Tracker 💰</h1>
-        <p>Track your monthly spending 📝</p>
-        <button id="addExpenseBtn" class="btn-main"> + Add New Expense </button>
+        <div class="header-content">
+            <h1>Smart Tracker 💎</h1>
+            <p>Manage your finances with ease</p>
+            <div class="header-btns">
+                <button class="btn-add">+ Add Expense</button>
+                <button class="btn-report">View Report</button>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="summary-cards">
-            <div class="card">
-                <h3>Total Spent 🛒</h3>
-                <p class="amount">$1,200 👛</p>
+            <div class="card balance">
+                <h3>Total Spent 💸</h3>
+                <p class="amount">$2,450</p>
             </div>
-            <div class="card">
-                <h3>Highest Category 🍴</h3>
-                <p class="category-name">Food 🍔</p>
+            <div class="card high-cat">
+                <h3>Highest Category 🏠</h3>
+                <p class="category-name">Rent & Bills</p>
             </div>
-            <div class="card">
-                <h3>Current Month 📅</h3>
-                <p class="month">February 🗓️</p>
+            <div class="card limit">
+                <h3>Monthly Limit 📉</h3>
+                <p class="amount">$3,000</p>
             </div>
         </section>
 
-        <div class="details-container">
-            <section class="categories">
-                <h2>Expense Categories 📊</h2>
+        <div class="dashboard-grid">
+            <section class="categories card-ui">
+                <h2>Category Breakdown</h2>
                 <ul>
-                    <li><span>Food</span> <b>$400</b></li>
-                    <li><span>Transport</span> <b>$150</b></li>
-                    <li><span>Shopping</span> <b>$300</b></li>
-                    <li><span>Entertainment</span> <b>$200</b></li>
+                    <li><span>🏠 House Rent</span> <b>$1,200</b></li>
+                    <li><span>🍔 Food & Dining</span> <b>$450</b></li>
+                    <li><span>🚗 Transport</span> <b>$200</b></li>
+                    <li><span>🎬 Entertainment</span> <b>$350</b></li>
+                    <li><span>💡 Utilities</span> <b>$250</b></li>
                 </ul>
             </section>
 
-            <section class="transactions">
-                <h2>Recent Transactions 🕒</h2>
-                <div class="transaction-item">
-                    <strong>Grocery Store</strong>
-                    <p>Feb 10, 2026 - $50</p>
+            <section class="transactions card-ui">
+                <h2>Recent Activity</h2>
+                <div class="item">
+                    <div class="icon">🍎</div>
+                    <div class="info">
+                        <strong>Supermarket</strong>
+                        <span>March 05, 2026</span>
+                    </div>
+                    <div class="price">-$85</div>
                 </div>
-                <div class="transaction-item">
-                    <strong>Gas Station</strong>
-                    <p>Feb 12, 2026 - $40</p>
+                <div class="item">
+                    <div class="icon">⚡</div>
+                    <div class="info">
+                        <strong>Electricity Bill</strong>
+                        <span>March 02, 2026</span>
+                    </div>
+                    <div class="price">-$120</div>
                 </div>
             </section>
         </div>
