@@ -1,31 +1,26 @@
 <style>
-    /* ઉપરના કાર્ડ માટે અલગ કલર */
     
-      
-    /* ફક્ત ઉપરના કાર્ડ માટેનો ક્લાસ */
-   a */
     
     .header-box {
-        /* 1. બેકગ્રાઉન્ડ અને લખાણ */
+         
         background-color: #ffeb3b !important; 
         color: #000 !important;
         text-align: center;
         
-        /* 2. ફોન્ટ સાઈઝ મોટી કરવા માટે */
+         
         font-size: 32px;
         font-weight: bold;
 
-        /* 3. કાર્ડની અંદરની જગ્યા (ઉપર-નીચે અને આજુબાજુ) */
+         
         padding: 40px 20px; 
 
-        /* 4. કાર્ડની બહારની જગ્યા (Left, Right, Top થી સ્પેસ) */
-        /* margin: ઉપર ડાબે નીચે જમણે */
+        
         margin: 20px 40px; 
 
-        /* 5. ખૂણા રાઉન્ડ કરવા માટે (Round Edges) */
+    
         border-radius: 30px; 
 
-        /* 6. વધારાનો લુક */
+        
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         border: none;
     }
@@ -34,34 +29,34 @@
 
 
  
-    .main-header-card {
-        background-color: #f1f3f5; /* આછો ગ્રે/સફેદ કલર */
+    /* .main-header-card {
+        background-color: #f1f3f5;  
         color: #333;
         padding: 20px;
         font-size: 26px;
         font-weight: bold;
         border-radius: 12px;
         border: 1px solid #ddd;
-    }
+    } */
 
-    /* નીચેના 3 કાર્ડ્સ માટે બેકગ્રાઉન્ડ કલર અને સ્પેસિંગ */
+     
     .stat-box {
-        background-color: #00a8d6; /* બ્લુ કલર */
+        background-color: #00a8d6; 
         color: white;
-        padding: 30px 15px; /* ઉપર-નીચે 30px અને આજુબાજુ 15px સ્પેસ */
-        border-radius: 15px; /* રાઉન્ડ કોર્નર */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* થોડો પડછાયો */
+        padding: 30px 15px;  
+        border-radius: 15px; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
     }
 
-    /* લખાણ (Text) ની સાઈઝ અને સ્ટાઇલ */
+     
     .stat-label {
-        font-size: 18px; /* ઉપરના ટેક્સ્ટની સાઈઝ */
+        font-size: 18px;  
         margin-bottom: 10px;
         opacity: 0.9;
     }
 
     .stat-value {
-        font-size: 32px; /* આંકડા કે નામની સાઈઝ (મોટી) */
+        font-size: 32px;  
         font-weight: bold;
         margin: 0;
     }
