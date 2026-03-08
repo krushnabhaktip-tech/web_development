@@ -27,20 +27,20 @@ header {
 .card {
     background:white;
     padding: 20px;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px;  
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex: 1;
     text-align: center;
-    border-top: 5px solid #db34c5; /* બ્લુ બોર્ડર ઉપરની બાજુ */
+    border-top: 5px solid #db34c5;  
 }
 
 .amount {
     font-size: 24px;
     font-weight: bold;
-    color: #27ae60; /* ગ્રીન કલર પૈસા માટે */
+    color: #27ae60;  
 }
 
-/* Main Layout */
+ 
 main {
     display: flex;
     gap: 20px;
@@ -54,7 +54,7 @@ main {
     box-shadow: 0 4px 8px rgba(19, 107, 162, 0.51);
 }
 
-/* Category List styling */
+ 
 ul {
     list-style: none;
     padding: 0;
@@ -62,16 +62,16 @@ ul {
 
 li {
     display: flex;
-    justify-content: space-between; /* આનાથી નામ ડાબી બાજુ અને રકમ જમણી બાજુ આવશે */
+    justify-content: space-between;  
     padding: 12px 0;
     border-bottom: 1px solid #0ca56d;
 }
 
-/* Transaction Items */
+ 
 .transaction-item {
     background: #f9f9f958;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border-left: 5px solid #e63f22; /* ઓરેન્જ લાઈન બાજુમાં */
+    border-left: 5px solid #e63f22;  
 }
