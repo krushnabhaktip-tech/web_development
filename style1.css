@@ -9,7 +9,7 @@
 header {
     text-align: center; 
     padding: 30px;
-    background-color: #0d27ede6;
+    background-color: #0dbcede3;
     color: white;
     font-size:20px;
     font-weight:bold;
@@ -31,7 +31,7 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     flex: 1;
     text-align: center;
-    border-top: 5px solid #db34c5;  
+    border-top: 5px solid #db34b4;  
 }
 
 .amount {
