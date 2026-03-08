@@ -1,0 +1,77 @@
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: white;
+    color: #333;
+}
+
+header {
+    text-align: center; 
+    padding: 30px;
+    background-color: #0dbcede3;
+    color: white;
+    font-size:20px;
+    font-weight:bold;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background:white;
+    padding: 20px;
+    border-radius: 15px;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+    border-top: 5px solid #db34b4;  
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;  
+}
+
+ 
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.categories, .transactions {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(19, 107, 162, 0.51);
+}
+
+ 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;  
+    padding: 12px 0;
+    border-bottom: 1px solid #0ca56d;
+}
+
+ 
+.transaction-item {
+    background: #f9f9f958;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 5px solid #e63f22;  
+}
