@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Party Master 😎</title>
+    <style>
+        :root {
+            --transition-speed: 0.8s;
+            --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--main-font);
+            transition: background var(--transition-speed) ease;
+            overflow: hidden; /* Prevent scrollbars due to falling emojis */
+            position: relative;
+        }
+
+        /* ----- Day Theme ----- */
+        body.day {
+            background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+            color: #2c3e50;
+        }
+
+        /* ----- Night Theme ----- */
+        body.night {
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: #00ffff;
+        }
+
+        /* ----- Party Theme ----- */
+        body.party {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 5s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        /* ----- Button Styles ----- */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            z-index: 10; /* Ensure buttons stay above falling emojis */
+        }
+
+        button {
+            padding: 18px 35px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .btn-day { background: #fbbf24; color: #7c2d12; }
+        .btn-night { background: #1a1a1a; color: #00ffff; border: 1px solid #00ffff; }
+        .btn-party { background: #ec4899; color: white; }
+
+        /* ----- Falling Emoji Styles ----- */
+        .emoji-particle {
+            position: absolute;
+            font-size: 2.5rem;
+            user-select: none;
+            pointer-events: none; /* Can't click on falling emojis */
+            animation: fallAnimation 3s linear forwards;
+            top: -10vh; /* Start just off-screen */
+        }
+
+        @keyframes fallAnimation {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="day">
+
+    <h1 id="main-title">Good Morning 🌞</h1>
+    <p id="info-text">Click a button to change the mood!</p>
+
+    <div class="btn-group">
+        <button class="btn-day" onclick="updateUI('day')">
+            Day 🌞
+        </button>
+        <button class="btn-night" onclick="updateUI('night')">
+            Night 🌚
+        </button>
+        <button class="btn-party" onclick="updateUI('party')">
+            Party 🥳
+        </button>
+    </div>
+
+    <script>
+        /**
+         * The only function you need to update the entire UI
+         */
+        function updateUI(theme) {
+            const body = document.body;
+            const title = document.getElementById('main-title');
+            const info = document.getElementById('info-text');
+            let emojiList = [];
+
+            // 1. Basic Changes
+            body.className = theme;
+            console.log(`Setting theme: ${theme}`);
+
+            // 2. Text & Emoji Content based on Theme
+            if (theme === 'day') {
+                title.innerText = "Good Morning 🌞";
+                info.innerText = "Fresh Start of the day! Make it count.";
+                emojiList = ['🌞', '🌻', '☕', '☕', '🌞', '🐦'];
+            } 
+            else if (theme === 'night') {
+                title.innerText = "Good Night 🌚";
+                info.innerText = "Time to rest. Sweet dreams! 😴";
+                emojiList = ['🌚', '✨', '🌙', '🌙', '🌚', '💤'];
+            } 
+            else if (theme === 'party') {
+                title.innerText = "Party Time 🥳";
+                info.innerText = "Let the music play! Feel the vibe.";
+                emojiList = ['🥳', '🎉', '💃', '🕺', '🔥', '🎵'];
+            }
+
+            // 3. Trigger the Emoji Rain!
+            triggerEmojiRain(emojiList);
+        }
+
+        /**
+         * Utility to create falling emoji effect
+         */
+        function triggerEmojiRain(emojiList) {
+            const body = document.body;
+
+            // Remove any existing falling emojis to prevent clutter
+            const existingEmojis = document.querySelectorAll('.emoji-particle');
+            existingEmojis.forEach(e => e.remove());
+
+            // Create 30 random emojis from the list
+            for (let i = 0; i < 30; i++) {
+                const span = document.createElement('span');
+                const randomEmoji = emojiList[Math.floor(Math.random() * emojiList.length)];
+                span.innerText = randomEmoji;
+                span.className = 'emoji-particle';
+
+                // Set random horizontal position
+                span.style.left = Math.random() * 100 + 'vw';
+                // Set random animation delay
+                span.style.animationDelay = Math.random() * 1.5 + 's';
+
+                body.appendChild(span);
+            }
+        }
+    </script>
+</body>
+</html>

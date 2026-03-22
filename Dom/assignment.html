@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Search - Food & Fun</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+        :root {
+            --primary-glow: #00d2ff;
+            --secondary-glow: #3a7bd5;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background: #0b0e14;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* --- Animated Mesh Background --- */
+        .mesh-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1b2735 0%, #090a0f 100%);
+        }
+
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to right, var(--primary-glow), var(--secondary-glow));
+            filter: blur(120px);
+            border-radius: 50%;
+            z-index: -1;
+            animation: float 20s infinite alternate;
+            opacity: 0.4;
+        }
+
+        .blob-2 { top: 60%; left: 70%; animation-delay: -5s; background: #ff0080; }
+        .blob-3 { top: 10%; left: 10%; animation-delay: -10s; background: #7928ca; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(100px, 150px) scale(1.2); }
+        }
+
+        /* --- Glass Container --- */
+        .container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 30px;
+            width: 400px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 { font-weight: 700; font-size: 28px; margin-bottom: 25px; background: linear-gradient(to right, #00d2ff, #92fe9d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: var(--primary-glow);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 25px;
+            max-height: 380px;
+            overflow-y: auto;
+            scrollbar-width: none; /* For Firefox */
+        }
+
+        ul::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome */
+
+        li {
+            padding: 18px;
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+        }
+
+        li:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-glow);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        #noResults { display: none; margin-top: 20px; color: #ff4d4d; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg">
+        <div class="blob"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <h2>Smart Finder ✨</h2>
+        <input type="text" id="searchInput" placeholder="Search anything...">
+
+        <ul id="itemList">
+            <li class="item">Pizza 🍕</li>
+            <li class="item">Burger 🍔</li>
+            <li class="item">Manchurian 🍜</li>
+            <li class="item">Noodles 🍝</li>
+            <li class="item">Frankie 🌯</li>
+            <li class="item">Pav Bhaji 🥘</li>
+            <li class="item">Dabeli 🍔</li>
+            <li class="item">Vadapav 🥯</li>
+            <li class="item">Sandwich 🥪</li>
+            <li class="item">French Fries 🍟</li>
+            <li class="item">Apple 🍎</li>
+            <li class="item">Banana 🍌</li>
+            <li class="item">Mango 🥭</li>
+            <li class="item">Strawberry 🍓</li>
+            <li class="item">Watermelon 🍉</li>
+            <li class="item">Grapes 🍇</li>
+            <li class="item">Potato 🥔</li>
+            <li class="item">Tomato 🍅</li>
+            <li class="item">Carrot 🥕</li>
+            <li class="item">Paneer 🧀</li>
+            <li class="item">Ice Cream 🍦</li>
+            <li class="item">Chocolate 🍫</li>
+            <li class="item">Cold Drink 🥤</li>
+            <li class="item">Cricket 🏏</li>
+            <li class="item">Football ⚽</li>
+            <li class="item">Cycling 🚲</li>
+            <li class="item">Dancing 💃</li>
+            <li class="item">Gym 🏋️‍♂️</li>
+            <li class="item">Music 🎧</li>
+            <li class="item">Movie Night 🍿</li>
+        </ul>
+
+        <p id="noResults">Nothing found! 🚫</p>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const items = document.querySelectorAll('.item');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', () => {
+            const val = searchInput.value.toLowerCase();
+            let found = false;
+
+            items.forEach(item => {
+                if(item.innerText.toLowerCase().includes(val)) {
+                    item.style.display = "flex";
+                    found = true;
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            noResults.style.display = found ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
