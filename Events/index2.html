@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #mydiv{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            overflow: auto;
+
+            .contect{
+                height: 300px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Events</h1>
+
+    <input id ="myInput" placeholder="type something....">
+
+    <div id="mydiv">
+
+        <div class="contect">Scroll</div>
+    </div>
+
+    <script>
+
+     const input = document.getElementById("myInput")
+
+     const div = document.getElementById("mydiv")
+
+     // Synatx
+     //Tag/Valrable.addEventLisnter('Type of event',function)
+
+     // 1. key up - keyword Events
+
+    //  function handlekeyUp(e){
+    //     console.log('key Preesed' + e.key)
+    //  }
+
+    //  input.addEventListener('keyup',handlekeyUp)
+
+    //  // 2. key Down - keyword Events
+
+    //  function handlekeyDown(e){
+    //     console.log('key Preesed: ' + e.key)
+    //  }
+
+    //  input.addEventListener('keydown',handlekeyDown)
+
+     
+    // change = change of value in Unput Tag
+    function handleChange(y){
+        console.log('Final Value of Input :' +y.target.value )
+    } input,addEventListener('Change',handleChange)
+
+    // Scrolled
+    function handleScroll(){
+        console.log('Scrolled')
+    }
+
+    div.addEventListener('scroll',handleScroll)
+
+    // mouseover
+
+    function handleMouseOver(){
+        div.style.background = "red"
+    }
+
+    div.addEventListener('mouseover',handleMouseOver)
+
+    // mouseout
+
+    function handleMouseout(){
+        div.style.background = "yellow"
+    }
+
+    div.addEventListener('mouseout',handleMouseout)
+
+    </script>
+
+     
+</body>
+</html>
