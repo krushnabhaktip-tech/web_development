@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <style>
+        .movie {
+            border: 1px solid black;
+            padding: 20px;
+            max-width: 500px;
+            background-color: aliceblue;
+            border-radius: 8px;
+            box-shadow: 0 0 15px black;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Movie Details</h1>
+    
+    <input type="text" id="movieInput" placeholder="Enter Movie Name">
+    <button onclick="searchMovie()">Search Movie</button>
+
+    <div class="movie" id="movieContainer">
+        <mark>Details</mark>
+    </div>
+
+    <script>
+        function searchMovie() {
+            let movieName = document.getElementById("movieInput").value;
+            if(movieName) {
+                getMovie(movieName);
+            } else {
+                alert("Please enter a movie name");
+            }
+        }
+
+        // Task - To Get The Movie Details - MovieName
+        async function getMovie(movieName) {
+            let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+            try {
+                // Step 1 : Fetch The Data from API
+                let response = await fetch(url);
+                let data = await response.json();
+
+                if (data.Response === "True") {
+                    const movieContainer = document.getElementById("movieContainer");
+                    
+                    // step 2:use .then() Successfull-Resolve and .catch()-failed/Reject
+                    movieContainer.innerHTML = `
+                        <h2>${data.Title}</h2>
+                        <p>Year: ${data.Year}</p>
+                        <p>Plot: ${data.Plot}</p>
+                        <img src="${data.Poster}" alt="Poster" width="200">
+                    `;
+                } else {
+                    alert("movie is not found");
+                }
+            } catch (error) {
+                console.log("Error Fetching Movie ", error);
+            }
+        }
+
+        function handleSerach(){
+            const movieNAME = Document.getElementById("movieInput").value;
+            if(movieNAME){
+                getMovie(movieNAME)
+            }
+        }
+        function add(){
+            console.log(2+2)
+        }
+        add()
+    </script>
+</body>
+</html>
